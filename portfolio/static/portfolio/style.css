@@ -1,0 +1,182 @@
+/* ========== General Styles ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  transition: background-color 0.5s;
+}
+
+.nav-link {
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff6a00 !important;
+  border-bottom: 2px solid #ff6a00;
+}
+
+/* ========== Hero Section ========== */
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+header button,
+header a.btn {
+  transition: all 0.3s ease;
+}
+
+header button:hover,
+header a.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+//*
+
+/* ========== Section Titles ========== */
+h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #ff6a00;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ========== Cards & Projects ========== */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project-card {
+  background: white;
+}
+
+body.dark-mode .project-card {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* ========== Buttons ========== */
+.btn-warning {
+  background-color: #ff6a00;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #ee0979;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background-color: #00c9ff;
+  border-color: #00c9ff;
+  color: #fff;
+}
+
+/* ========== Modal ========== */
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-header {
+  border-radius: 15px 15px 0 0;
+}
+
+
+
+/* ========== Typing Animation Cursor ========== */
+
+/* ========== Footer ========== */
+footer {
+  background: #1f1f1f;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* ========== Dark Mode ========== */
+body.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+body.dark-mode footer {
+  background: #1a1a1a;
+}
+
+/* ========== Scroll Animations ========== */
+section, .project-card, .card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  .card ul {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+
